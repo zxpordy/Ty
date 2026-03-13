@@ -1,0 +1,19 @@
+name: worker
+
+on:
+  push:
+
+jobs:
+  council:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        barely: ["access", "actress", "slight", "statistic", "troop"]
+        senior: ["coordinate", "gift", "reference", "arise"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar RC
